@@ -1,0 +1,31 @@
+from posts.models import Post
+new_post1=Post(title="react for js",content="video video")
+new_post1.save()
+Post.object.all()
+Post.objects.all()
+exit()
+from posts.serializers import PostSerializer
+from posts.models import Post
+from rest_framework.renderers import JSONRenderer
+new_post2 = Post(title="drf basics",content="basics of drf")
+new_post2.save()
+serializer = PostSerializer(instance=new_post2)
+serializer
+serialize.data
+serializer.data
+jsondata = JSONRenderer().render(serializer.data)
+jsondata
+import io 
+stream = io.BytesIO(json_data)
+stream = io.BytesIO(jsondata)
+from rest_framework.parsers import JSONParser 
+dictdata = JSONParser().parse(stream)
+dictdata
+exit()
+
+
+serializer = PostSerializer(instance=post,data=data) for update
+
+post.delete()
+
+
